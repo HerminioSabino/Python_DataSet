@@ -16,7 +16,9 @@ major
 
 base <- data.frame(valor = c(coronel, capitao, tenente, cabo, sargento, soldado, major))
 base$Patente <- c('Coronel', 'Capitão', 'Tenente', 'Cabo', 'Sargento', 'Soldado', 'Major' )
-str(base)
+str(base) 
+
+### Gráfico Patente Militar
 bp <- barplot(base$valor, 
               ylim = c(0,40),
               names.arg = base$Patente,
@@ -34,10 +36,14 @@ diaconos
 baser <- data.frame(valor = c(irmao, pastor, padre, diaconos, Missionario))
 baser$Patente <- c('Irmão', 'Pastor', 'Padre', 'Diácono','Missionário' )
 str(baser)
+
+### Gráfico religão
 bp <- barplot(baser$valor, 
               ylim = c(0,120),
               names.arg = baser$Patente,
               main = "Candidatos com menção religiosa nos nomes no RN")
 text(bp, 0, round(baser$valor, 2),cex=1.5,pos=3) 
 
+
+#### 
 
